@@ -5,7 +5,6 @@ int main() {
     //freopen("input.txt", "r", stdin);
     int node, m, x, y, w;
     scanf("%d %d", &node, &m);
-    
     int dist[node];
     for (int i = 0; i < node; i++) {
         dist[i] = INF;
@@ -17,11 +16,9 @@ int main() {
         edge[i][1] = y;
         edge[i][2] = w;
     }
-    
     int source;
     scanf("%d", &source);
     dist[source] = 0;
-    
     for (int i = 0; i < node - 1; i++) {
         for (int j = 0; j < m; j++) {
             int u = edge[j][0], v = edge[j][1], w = edge[j][2];
