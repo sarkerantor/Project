@@ -3,6 +3,7 @@
 #define inf 10000000
 int main() {
     //freopen("input.txt","r",stdin);
+    printf("Enter the number of Airport and the route: ");
     int node,edge,x,y,w;
     scanf("%d %d",&node,&edge);
     int dist[node];
@@ -10,12 +11,14 @@ int main() {
         dist[i]=inf;
     }
     int graph[edge][3];
+    printf("Enter the distance between two Airport : \n");
     for (int i=0;i<edge;i++) {
         scanf("%d %d %d",&x,&y,&w);
         graph[i][0]=x;
         graph[i][1]=y;
         graph[i][2]=w;
     }
+    printf("Enter the source :");
     int source;
     scanf("%d",&source);
     dist[source]=0;
@@ -27,7 +30,8 @@ int main() {
             }
         }
     }
-    for (int i=0;i<node;i++) {
+    printf("Distance : ");
+    for (int i=1;i<=node;i++) {
         printf("%d ",dist[i]);
     }
     printf("\n");
